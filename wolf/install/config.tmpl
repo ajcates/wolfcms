@@ -41,6 +41,9 @@ define('CHECK_UPDATES', true);
 // The number of seconds before the check for a new Wolf version times out in case of problems.
 define('CHECK_TIMEOUT', 3);
 
+//Where Wolf will look for plugins
+define('PLUGINS_ROOT', CMS_ROOT.DS.'../plugins');
+
 // The full URL of your Wolf CMS install
 define('URL_PUBLIC', 'http://<?php echo substr(dirname($_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME']), 0, strrpos(dirname($_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME']), '/wolf')); ?>/');
 

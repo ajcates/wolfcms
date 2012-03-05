@@ -68,7 +68,7 @@ function url_start_with($url) {
 
 function main() {
     // get the uri string from the query
-    $uri = $_SERVER['QUERY_STRING'];
+    $uri = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : "";
 
     // Make sure special characters are decoded (support non-western glyphs like japanese)
     $uri = urldecode($uri);

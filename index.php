@@ -19,7 +19,6 @@ define('CMS_VERSION', '0.8.0-dev');
 define('CMS_ROOT', dirname(__FILE__));
 define('DS', DIRECTORY_SEPARATOR);
 define('CORE_ROOT', CMS_ROOT.DS.'wolf');
-define('PLUGINS_ROOT', CORE_ROOT.DS.'plugins');
 define('APP_PATH', CORE_ROOT.DS.'app');
 
 require_once(CORE_ROOT.DS.'utils.php');

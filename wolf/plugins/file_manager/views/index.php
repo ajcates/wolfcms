@@ -51,7 +51,11 @@ if (!defined('IN_CMS')) { exit(); }
 <?php foreach ($files as $file): ?>
     <tr class="<?php echo odd_even(); ?>">
       <td>
+          <?php if (preg_match('/\.(jpg|jpeg|pjpeg|png|gif|ico)$/i', $file->name)) { ?>
+          <img class="thumb" src="<?php echo URI_PUBLIC;?>public/<?php echo $dir.$file->name; ?>" align="middle" />
+          <?php } else { ?>
           <img src="<?php echo ICONS_URI;?>file-<?php echo $file->type ?>-16.png" align="top" />
+          <?php } ?>
           <?php echo $file->link; ?>
       </td>
       <td><code><?php echo $file->size; ?></code></td>
